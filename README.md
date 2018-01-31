@@ -19,3 +19,6 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+# Router new Vuex.Store等的大小写问题
+# bootstrap安装的版本问题可能导致样式和效果的不同
