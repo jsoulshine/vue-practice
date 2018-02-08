@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import skills from '@/components/skills'
+import Skills from '@/components/skills'
+import Cropper from '@/components/Cropper'
+
 
 Vue.use(Router)
 
@@ -9,7 +11,14 @@ export default new Router({
     {
       path: '/',
       name: 'skills',
-      component: skills
+      component: Skills,
+      children: [
+        {
+          path: 'cropper',
+          name: 'cropper',
+          component: Cropper
+        }
+      ]
     }
   ]
 })

@@ -1,26 +1,32 @@
 <template>
     <div>
-        
+        <button class="btn btn-success">SKILLS</button>
+    <router-link to="/cropper">aaa</router-link>    
+    <router-view></router-view>    
     </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 export default {
   name: "skills",
   data() {
-    return {
-      
-    };
+    return {};
   },
   methods: {
-
+  
   },
   computed: {
-    ...mapGetters([
-      'doubleCounter'
-    ])
+    ...mapGetters(["doubleCounter"])
+  },
+  created() {
+
+  },
+  watch: {
+    $route(to, from) {
+      console.log(to)
+    }
   }
 };
 </script>
