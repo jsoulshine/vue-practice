@@ -1,7 +1,7 @@
 <template>
     <div>
         <button class="btn btn-success">SKILLS</button>
-    <router-link to="/cropper">aaa</router-link>    
+    <router-link to="/cropper">Croppers</router-link>    
     <router-view></router-view>    
     </div>
 </template>
@@ -25,7 +25,7 @@ export default {
   },
   watch: {
     $route(to, from) {
-      console.log(to)
+
     }
   }
 };
