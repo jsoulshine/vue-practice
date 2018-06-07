@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Button type='success'>111</Button>
         <button class="btn btn-success">SKILLS</button>
     <router-link to="/cropper">Croppers</router-link>    
     <router-view></router-view>    

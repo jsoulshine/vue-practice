@@ -1,24 +1,25 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Skills from '@/components/skills'
-import Cropper from '@/components/Cropper'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import iView from 'iview';
+import {routers} from './router';
+
+Vue.use(VueRouter);
+//路由配置
+const RouterConfig = {
+    // mode: 'history',
+    routers: routers
+};
+
+export const router = new VueRouter(RouterConfig);
+
+// router.beforeEach((to, from, next) => {
+//     iView.LoadingBar.start();
+//     window.scrollTo(0, 0);
+// });
+
+// router.afterEach((to, from, next) => {
+//     iView.LoadingBar.finish();
+//     window.scrollTo(0, 0);
+// });
 
 
-Vue.use(Router)
-
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'skills',
-      component: Skills,
-      children: [
-        {
-          path: 'cropper',
-          name: 'cropper',
-          component: Cropper
-        }
-      ]
-    }
-  ]
-})
