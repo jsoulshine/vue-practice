@@ -1,7 +1,7 @@
 <template>
     <Card>
         Main
-        <router-view></router-view>
+        <!-- <router-view></router-view> -->
     </Card>
 </template>
 
