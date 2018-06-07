@@ -1,5 +1,5 @@
 <template>
-    <div>login</div>
+    <Card>login</Card>
 </template>
 
 <script>
@@ -14,7 +14,7 @@
             }
         },
         methods: {
-            
+
         }
     }
 </script>

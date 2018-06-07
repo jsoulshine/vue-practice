@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 //路由配置
 const RouterConfig = {
     // mode: 'history',
-    routers: routers
+    routes: routers   //routes  而不是routers ！！！！
 };
 
 export const router = new VueRouter(RouterConfig);
