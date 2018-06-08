@@ -20,7 +20,6 @@ router.beforeEach((to, from, next) => {
     Util.changePageTitle(toTitle);
 
     if (!Cookies.get('account') && to.name !== 'login') {  // 判断是否已经登录且前往的页面不是登录页
-        console.log(1);
         next({
             name: 'login'  //对应路由中的name值
         });
