@@ -24,6 +24,3 @@ new Vue({
   render: h => h(App),
   template: '<App/>'
 })
-
-
-//=============================>home页显示情况

@@ -1,6 +1,6 @@
 <template>
   <div id="main">
-      111
+      vue test
     <router-view></router-view>
   </div>
 </template>

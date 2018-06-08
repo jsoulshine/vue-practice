@@ -11,7 +11,7 @@ export const otherRouter = {
     component: Main,
     children: [
         {path: 'home', name: 'home', title: 'Home', component: resolve => {require(['@/views/home/home.vue'], resolve)}},
-        {path: 'owner-space', name: 'owner-space', title: 'Owner Space', component: resolve => {require(['@/views/owner-space/owner-space.vue'], resolve)}}
+        {path: 'owner-space/:userName/id/:userId', name: 'owner-space', title: 'Owner Space', component: resolve => {require(['@/views/owner-space/owner-space.vue'], resolve)}}
     ]
 }
 //登录

@@ -3,7 +3,10 @@
         <div style='overflow: hidden'>
             <span>Main</span>
             <p style='float: right'>
-                <Button type= 'warning' @click='logout'>Loginout</Button>
+                <Button type= 'error' @click='logout'>Loginout</Button>
+            </p>
+            <p style='float: right; margin-right: 10px'>
+                <Button type= 'warning' @click='goOwner'>Me</Button>
             </p>
         </div>
         <router-view></router-view>
@@ -19,6 +22,15 @@ import Cookies from 'js-cookie';
                 Cookies.remove('account');
                 this.$router.replace({
                     name: 'login'
+                })
+            },
+            goOwner(){
+                this.$router.push({
+                    name: 'owner-space',
+                    params: {
+                        userName: 'jss',
+                        userId: 10000
+                    }
                 })
             }
         }
