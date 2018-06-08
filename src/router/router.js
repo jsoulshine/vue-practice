@@ -4,6 +4,17 @@ import js_router from './modules/_js.skills';
 import h5_router from './modules/_h5.skills';
 
 //其他router
+export const otherRouter = {
+    path: '/',
+    name: 'otherRouter',
+    title: 'otherRouter',
+    component: Main,
+    children: [
+        {path: 'home', name: 'home', title: 'Home', component: resolve => {require(['@/views/home/home.vue'], resolve)}},
+        {path: 'owner-space', name: 'owner-space', title: 'Owner Space', component: resolve => {require(['@/views/owner-space/owner-space.vue'], resolve)}}
+    ]
+}
+//登录
 export const loginRouter = {
     path: '/login',
     name: 'login',
@@ -20,6 +31,7 @@ export const jsSkillRouter = js_router;
 export const h5SkillRouter = h5_router;
 
 export const routers = [
+    otherRouter,
     loginRouter,
     ...vueSkillRouter,
     ...jsSkillRouter,

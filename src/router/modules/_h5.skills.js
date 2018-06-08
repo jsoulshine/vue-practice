@@ -3,8 +3,8 @@ import Main from '@/views/Main.vue';
 const h5Skills = [
     {
         path: '/h5-blob',
-		name: 'blob',
-        title: 'blob',
+		name: 'h5blob',
+        title: 'h5blob',
         meta: {
             title: 'JS-Blob'
         },

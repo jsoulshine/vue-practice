@@ -3,8 +3,8 @@ import Main from '@/views/Main.vue';
 const jsSkills = [
     {
         path: '/js-upload-preview',
-		name: 'cropper',
-        title: 'cropper',
+		name: 'jscropper',
+        title: 'jscropper',
         meta: {
             title: 'JS-Upload-Preview'
         },
