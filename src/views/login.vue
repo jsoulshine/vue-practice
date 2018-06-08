@@ -10,11 +10,11 @@ import Cookies from 'js-cookie';
     export default {
         name: 'login',
         props: {
-
+            
         },
         data(){
             return {
-
+                
             }
         },
         methods: {
