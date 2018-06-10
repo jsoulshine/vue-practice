@@ -4,14 +4,16 @@ import js_router from './modules/_js.skills';
 import h5_router from './modules/_h5.skills';
 
 //其他router
+    //路由懒加载
+const ownerSpace = () => import('@/views/owner-space/owner-space.vue')
 export const otherRouter = {
     path: '/',
     name: 'otherRouter',
     title: 'otherRouter',
     component: Main,
     children: [
-        {path: 'home', name: 'home', title: 'Home', component: resolve => {require(['@/views/home/home.vue'], resolve)}},
-        {path: 'owner-space/:userName/id/:userId', name: 'owner-space', title: 'Owner Space', component: resolve => {require(['@/views/owner-space/owner-space.vue'], resolve)}}
+        {path: 'home', name: 'home', meta: {requiresAuth: true}, title: 'Home', component: resolve => {require(['@/views/home/home.vue'], resolve)}},
+        {path: 'owner-space/:userName/id/:userId', meta: {scrollToTop: true}, name: 'owner-space', title: 'Owner Space', component: ownerSpace}
     ]
 }
 //登录

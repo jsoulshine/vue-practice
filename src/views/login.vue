@@ -20,9 +20,13 @@ import Cookies from 'js-cookie';
         methods: {
             handleLogin(){
                 Cookies.set('account', 'jss');  //统一写在store里面
+                let redirectName = this.$route.query.redirect || 'home';
                 this.$router.replace({    //比较push和replace，go等的区别
-                    name: 'home'
-                })
+                    name: redirectName
+                }, this.loginSuccess())
+            },
+            loginSuccess(){
+                this.$Message.success('Login Success')
             }
         }
     }

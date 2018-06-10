@@ -42,17 +42,28 @@
                         query: {
                             userId: this.$route.params.userId
                         }
-                    })
+                    }, this.onShowPsw(), this.onHidePsw())
                 }else{
                     this.$router.push({
-                        name: 'owner-space',
-                        params: {
+                        name: 'owner-space',  //如果加了path项，则params将失效，即路由会变为: 'http://localhost:8080/#/owner-space'
+                        params: {             //query不会受影响
                             userName: this.$route.params.userName === 'jss' ? 'jss' : 'JSS',
                             userId: this.$route.params.userId === 10001 ? 10001 : 10000
                         }
                     })
                 }
-                
+            },
+            onShowPsw(){  //导航成功的回调
+                this.$Notice.success({
+                    title: 'Notice',
+                    desc: 'Your information is showed'
+                })
+            },
+            onHidePsw(){ //被提前终止或者导航到相同路由的回调
+                this.$Notice.error({
+                    title: 'Warning',
+                    desc: 'Your request url is the same thus triggering onAbort()'
+                })
             }
         },
         // beforeRouteUpdate(){
