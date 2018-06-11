@@ -3,6 +3,7 @@ import Vuex  from 'vuex';
 import mutations from './mutations.js'
 import actions from './actions.js'
 import app from './modules/app.js'
+import cart from './modules/cart.js'
 
 Vue.use(Vuex);
 
@@ -17,6 +18,7 @@ export const store = new Vuex.Store({
     mutations,
     actions,
     modules: {
-        app
+        app,
+        cart
     }
 })
