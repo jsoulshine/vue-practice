@@ -1,34 +1,36 @@
 <template>
-    <div>
-        <Button type='success'>111</Button>
-        <button class="btn btn-success">SKILLS</button>
-    <router-link to="/cropper">Croppers</router-link>    
-    <router-view></router-view>    
-    </div>
+<div>
+    <Button type='success'>111</Button>
+    <button class="btn btn-success">SKILLS</button>
+    <router-link to="/cropper">Croppers</router-link>
+    <router-view></router-view>
+</div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import {
+    mapGetters
+} from "vuex";
 
 export default {
-  name: "skills",
-  data() {
-    return {};
-  },
-  methods: {
-  
-  },
-  computed: {
-    ...mapGetters(["doubleCounter"])
-  },
-  created() {
+    name: "skills",
+    data() {
+        return {};
+    },
+    methods: {
 
-  },
-  watch: {
-    $route(to, from) {
+    },
+    computed: {
+        ...mapGetters(["doubleCounter"])
+    },
+    created() {
 
+    },
+    watch: {
+        $route(to, from) {
+
+        }
     }
-  }
 };
 </script>
 
