@@ -3,7 +3,7 @@
     Home
     <div style='height: 600px; display: flex; justify-content: space-between'>
         <h3 id='anchorTop'>Information</h3>
-        <router-link to='/home#anchorBot'>to Performance</router-link>
+        <router-link to='/home#anchorBot' active-class="router-hover" exact event="mousemove">to Performance</router-link>
     </div>
     <div style='height: 600px; display: flex; justify-content: space-between'>
         <h3 id='anchorBot'>Performance</h3>
@@ -43,6 +43,8 @@ export default {
 </script>
 
 <style scoped>
-
+    .router-hover{
+        color: yellowgreen;
+    }
 </style>
 
