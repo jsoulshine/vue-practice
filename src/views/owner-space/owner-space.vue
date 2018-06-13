@@ -23,6 +23,7 @@
             <span v-html="funcCount"></span><br>
             <Button type="ghost" size='small' @click="handleAdd">+</Button>
             <Button type="ghost" size='small' @click="addAsync">+</Button>
+            <Button type="ghost" size='small' @click="operateAsync">+</Button>
             <Button type="ghost" size='small' @click="handleMinus">-</Button>
             <Button type="ghost" size='small' @click="decrement(2)">-</Button>
             <Button type="ghost" size='small' @click="decrementAsync(3)">-</Button>
@@ -122,7 +123,8 @@
                 addAsync: 'incrementAsync' 
             }),
             ...mapActions([
-                'decrementAsync' 
+                'decrementAsync',
+                'operateAsync'
             ])
         },
         // beforeRouteUpdate(){

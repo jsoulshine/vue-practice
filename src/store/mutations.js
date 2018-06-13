@@ -3,7 +3,7 @@ const mutations = {
         state.count += isNaN(n) ? 1 : n
     },
     decrement(state, n){
-        state.count -= isNaN(n) ? 1 : n
+        state.count -= isNaN(n) ? 2 : n
     }
 };
 
