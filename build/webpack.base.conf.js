@@ -20,7 +20,7 @@ const createLintingRule = () => ({
 })
 
 module.exports = {
-  context: path.resolve(__dirname, '../'),
+  context: path.resolve(__dirname, '../'), //__dirname变量获取当前模块文件所在目录的完整绝对路径
   entry: {
     app: './src/main.js'
   },
@@ -42,7 +42,7 @@ module.exports = {
     rules: [
       // ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
-        test: /\.vue$/,
+        test: /\.vue$/,  //用于标识出应该被对应的 loader 进行转换的某个或某些文件
         loader: 'vue-loader',
         options: vueLoaderConfig
       },
