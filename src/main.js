@@ -11,10 +11,12 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 //import iview
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
+import vueTool from './libs/vue-tool'
 
 Vue.config.productionTip = false;
 
 Vue.use(iView);
+Vue.use(vueTool);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
