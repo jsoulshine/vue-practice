@@ -12,11 +12,13 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import vueTool from './libs/vue-tool'
+import AxiosPlugin from './libs/AxiosPlugin.js'
 
 Vue.config.productionTip = false;
 
 Vue.use(iView);
 Vue.use(vueTool);
+Vue.use(AxiosPlugin);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -11,8 +11,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^3.3.7",
     "cropperjs": "^1.2.2",
+    "es6-promise": "^4.2.4",
     "iview": "^2.14.1",
     "jquery": "^3.3.1",
     "js-cookie": "^2.2.0",
