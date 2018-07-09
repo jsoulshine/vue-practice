@@ -22,15 +22,24 @@ import Cookies from 'js-cookie';
                 Cookies.set('account', 'jss');  //统一写在store里面
                 this.$http({
                     method: 'GET',
-                    url: '/api/mockData'
+                    url: '/api/loginData'
                 }).then(res => {
                     console.log(res);
                     if(res.code === 200){
+                        //数据存储
+                        this.$store.commit('login', {
+                            account: res.user.account,
+                            userId: res.user.userId,
+                            token: res.token
+                        });
+                        //跳转
                         let redirectName = this.$route.query.redirect || 'home';
                         this.$router.replace({    //比较push和replace，go等的区别
                             name: redirectName
                         }, this.loginSuccess())
                     }
+                }).catch(error => {
+                    console.log(error);
                 })
             },
             loginSuccess(){

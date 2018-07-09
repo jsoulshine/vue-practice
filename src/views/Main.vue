@@ -14,12 +14,10 @@
 </template>
 
 <script>
-import Cookies from 'js-cookie';
-
     export default {
         methods: {
             logout(){
-                Cookies.remove('account');
+                this.$store.commit('logout');
                 this.$router.replace({
                     name: 'login'
                 })

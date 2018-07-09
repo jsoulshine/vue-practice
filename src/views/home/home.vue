@@ -3,11 +3,11 @@
     Home
     <div style='height: 600px; display: flex; justify-content: space-between'>
         <h3 id='anchorTop'>Information</h3>
-        <router-link to='/home#anchorBot' active-class="router-hover" exact event="mousemove">to Performance</router-link>
+        <router-link to='/home#anchorBot' active-class="router-hover" exact event="mousemove">to Performance {{data1}}</router-link>
     </div>
     <div style='height: 600px; display: flex; justify-content: space-between'>
         <h3 id='anchorBot'>Performance</h3>
-        <Button type="ghost" size='small' style="height: 30px" @click="toInformation">to Information</Button>
+        <Button type="ghost" size='small' style="height: 30px" @click="toInformation">to Information{{data2}}</Button>
     </div>
 </Card>
 </template>
@@ -17,10 +17,22 @@ export default {
     name: 'home',
     data() {
         return {
-
+            data1: '',
+            data2: ''
         }
     },
     methods: {
+        initData(){
+            this.$http({
+                method: 'GET',
+                url: '/api/testData'
+            }).then(res => {
+                this.data1 = res.data[0];
+                this.data2 = res.data[1];
+            }).catch(error => {
+                console.log(error);
+            })
+        },
         toInformation(){
             this.$router.push({
                 name: 'home',
@@ -37,7 +49,7 @@ export default {
         }
     },
     created() {
-
+        this.initData();
     }
 }
 </script>

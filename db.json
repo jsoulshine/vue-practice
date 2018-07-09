@@ -1,7 +1,16 @@
 {
-  "mockData": {
+  "loginData": {
     "msg": "success",
     "code": 200,
+    "user": {
+        "account": "jss",
+        "userId": 10000
+    },
     "token": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZG1pbiIsInVzZXJfaWQiOjEwMDAwLCJ3b3JrZXJfaWQiOiJhZG1pbiIsInJvbGVfaWQiOjAsInRlYW1faWQiOjAsImNvbXBhbnlfaWQiOjAsImdyb3VwX2lkIjoxLCJpYXQiOjE1MTgzNDM2ODcsImlzcyI6ImpvbGx5Y2hpYy5jb20iLCJleHAiOjE1MTgzNzM2ODd9.TStdXZpjVF4vM3qdnckhEyYwd4Ntrr5tTTl-Llu8Z5o"
+  },
+  "testData": {
+    "msg": "success",
+    "code": 200,
+    "data": [1, 2]
   }
 }

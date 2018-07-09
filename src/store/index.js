@@ -4,11 +4,13 @@ import mutations from './mutations.js'
 import actions from './actions.js'
 import app from './modules/app.js'
 import cart from './modules/cart.js'
+import user from './modules/user.js'
+
 
 Vue.use(Vuex);
 
 //new Vuex.Store中的store首字母要大写
-export const store = new Vuex.Store({
+const store = new Vuex.Store({
     state: {
         count: 1
     },
@@ -21,6 +23,9 @@ export const store = new Vuex.Store({
     actions,
     modules: {
         app,
-        cart
+        cart,
+        user
     }
 })
+
+export default store
