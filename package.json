@@ -9,8 +9,8 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
-    "mock": "node_modules/.bin/json-server --watch mock/db.js --port 3001",
-    "json": "json-server db.json --port 3000"
+    "mock_server": "node_modules/.bin/json-server --watch mock/db.js --port 3001",
+    "json_server": "json-server db.json --port 3000"
   },
   "dependencies": {
     "axios": "^0.18.0",
