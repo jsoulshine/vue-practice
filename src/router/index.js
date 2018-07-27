@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import iView from 'iview';
-import {routers} from './router';
+import {routers, otherRouter, vueSkillRouter, jsSkillRouter, h5SkillRouter} from './router';
 import Util from '../libs/util';
 import Cookies from 'js-cookie';
 
@@ -53,9 +53,18 @@ router.beforeEach((to, from, next) => {
             name: 'login',  //对应路由中的name值
             query: {redirect: to.name}  //重新登录后直接跳转
         });
-    }else{
-        next();
-        iView.LoadingBar.finish();
+    } else if (Cookies.get('account') && to.name === 'login') {  // 判断是否已经登录且前往的是登录页
+        next(false);
+        if (from.name !== 'home') {
+            router.replace({
+                name: 'home'
+            });
+        } else {
+            iView.LoadingBar.finish();
+            window.scrollTo(0, 0);
+        }
+    } else {
+        Util.toDefaultPage([otherRouter, ...vueSkillRouter, ...jsSkillRouter, ...h5SkillRouter], to.name, router, next);
     }
 
 
