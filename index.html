@@ -3,10 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>vue-practice</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <!-- options.data -->
+        <%= htmlWebpackPlugin.options.data %>
+
+    <!-- files -->
+        type: <%= htmlWebpackPlugin.files %>
+            <!-- detail -->
+        <% for(let key in htmlWebpackPlugin.files) { %>
+        <%= key %> : <%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
+        <% } %>
+
+    <!-- options -->
+        type: <%= htmlWebpackPlugin.files %>
+            <!-- detail -->
+        <% for(let key in htmlWebpackPlugin.options) { %>
+        <%= key %> : <%= JSON.stringify(htmlWebpackPlugin.options[key]) %>
+        <% } %>
+
   </body>
 </html>

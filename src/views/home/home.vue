@@ -1,5 +1,9 @@
 <template>
+
 <Card>
+    <Card>
+        <img src="../../../static/images/static.png" alt="">
+    </Card>
     Home
     <div style='height: 600px; display: flex; justify-content: space-between'>
         <h3 id='anchorTop'>Information</h3>
@@ -32,6 +36,17 @@ export default {
             }).catch(error => {
                 console.log(error);
             })
+            // test for json
+            this.$http({
+                method: 'GET',
+                url: '../../../static/json/static.json'
+            }).then(res => {
+                console.log('json:', res);                
+            }).catch(error => {
+                console.log(error);
+            })
+            //test for image
+                //js写法？？
         },
         toInformation(){
             this.$router.push({
