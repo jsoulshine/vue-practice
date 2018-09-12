@@ -55,7 +55,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      inject: true
+      inject: true,
+      jsFiles: [
+        'static/js-plugins/GetOrgChart/getorgchart.js'
+        ],
+      cssFiles: [
+        'static/js-plugins/GetOrgChart/getorgchart.css'
+      ],
     }),
     // copy custom static assets
     // new CopyWebpackPlugin([

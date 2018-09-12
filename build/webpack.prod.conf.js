@@ -65,6 +65,12 @@ const webpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       title: 'learn webpack',
       inject: true,
+    //   jsFiles: [
+    //     'static/js-plugins/GetOrgChart/getorgchart.js'
+    //     ],
+    //   cssFiles: [
+    //     'static/js-plugins/GetOrgChart/getorgchart.css'
+    //   ],
     //   minify: {
     //     removeComments: true,
     //     collapseWhitespace: true,

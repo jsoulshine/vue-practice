@@ -2,6 +2,7 @@ import Main from '@/views/Main.vue';
 import vue_router from './modules/_vue.skills';
 import js_router from './modules/_js.skills';
 import h5_router from './modules/_h5.skills';
+import components_router from './modules/_components.skills';
 
 //其他router
     //路由懒加载
@@ -31,11 +32,13 @@ export const loginRouter = {
 export const vueSkillRouter = vue_router;
 export const jsSkillRouter = js_router;
 export const h5SkillRouter = h5_router;
+export const componentsSkills = components_router;
 
 export const routers = [
     otherRouter,
     loginRouter,
     ...vueSkillRouter,
     ...jsSkillRouter,
-    ...h5SkillRouter
+    ...h5SkillRouter,
+    ...componentsSkills
 ]

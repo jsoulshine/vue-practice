@@ -12,15 +12,18 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 //import iview
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
+import {getOrgChart} from 'jollychic-getorgchart';
+import 'jollychic-getorgchart/dist/getorgchart.css';
 import vueTool from './libs/vue-tool'
-import AxiosPlugin from './libs/AxiosPlugin.js'
+import AxiosPlugin from './libs/AxiosPlugin.js';
+import 'vue-orgchart/dist/style.min.css';
 
 Vue.config.productionTip = false;
 
 Vue.use(iView);
 Vue.use(vueTool);
 Vue.use(AxiosPlugin);
-
+console.log(getOrgChart);
 // 页面刷新时，重新赋值token    方法二: 将token写在getters中，每次刷新可以自动挂载
 if (window.localStorage.token) {
 	store.commit('login', {
