@@ -23,7 +23,6 @@ Vue.config.productionTip = false;
 Vue.use(iView);
 Vue.use(vueTool);
 Vue.use(AxiosPlugin);
-console.log(getOrgChart);
 // 页面刷新时，重新赋值token    方法二: 将token写在getters中，每次刷新可以自动挂载
 if (window.localStorage.token) {
 	store.commit('login', {
