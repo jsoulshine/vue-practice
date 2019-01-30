@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <!-- <% for(let chunk in htmlWebpackPlugin.options.cssFiles) { %>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <!-- <% for(let chunk in htmlWebpackPlugin.options.cssFiles) { %>
         <link rel="stylesheet" href="<%=htmlWebpackPlugin.options.cssFiles[chunk]%>">
     <% } %> -->
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- <% for(let chunk in htmlWebpackPlugin.options.jsFiles) { %>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- <% for(let chunk in htmlWebpackPlugin.options.jsFiles) { %>
         <script src="<%=htmlWebpackPlugin.options.jsFiles[chunk]%>"></script>
     <% } %> -->
-    <!-- built files will be auto injected -->
+  <!-- built files will be auto injected -->
 
-    <!-- options.data -->
-        <%= htmlWebpackPlugin.options.data %>
+  <!-- options.data -->
+  <!-- <%= htmlWebpackPlugin.options.data %> -->
 
-    <!-- options.PluginFiles -->
-        <%= htmlWebpackPlugin.options.jsFiles[0] %>
-        <%= htmlWebpackPlugin.options.cssFiles[0] %>
+  <!-- options.PluginFiles -->
+  <!-- <%= htmlWebpackPlugin.options.jsFiles[0] %>
+        <%= htmlWebpackPlugin.options.cssFiles[0] %> -->
 
-    <!-- files -->
-        type: <%= htmlWebpackPlugin.files %>
-            <!-- detail -->
-        <% for(let key in htmlWebpackPlugin.files) { %>
+  <!-- files -->
+  <!-- type: <%= htmlWebpackPlugin.files %> -->
+  <!-- detail -->
+  <!-- <% for(let key in htmlWebpackPlugin.files) { %>
         <%= key %> : <%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
-        <% } %>
+        <% } %> -->
 
-    <!-- options -->
-        type: <%= htmlWebpackPlugin.files %>
-            <!-- detail -->
-        <% for(let key in htmlWebpackPlugin.options) { %>
+  <!-- options -->
+  <!-- type: <%= htmlWebpackPlugin.files %> -->
+  <!-- detail -->
+  <!-- <% for(let key in htmlWebpackPlugin.options) { %>
         <%= key %> : <%= JSON.stringify(htmlWebpackPlugin.options[key]) %>
-        <% } %>
+        <% } %> -->
 
-  </body>
+</body>
+
 </html>

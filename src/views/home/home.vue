@@ -2,7 +2,7 @@
 
 <Card>
     <Card>
-        <img src="../../../static/images/static.png" alt="">
+        <!-- <img src="../../../static/images/static.png" alt=""> -->
     </Card>
     Home
     <div style='height: 600px; display: flex; justify-content: space-between'>
