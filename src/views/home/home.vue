@@ -7,7 +7,7 @@
     Home
     <div style='height: 600px; display: flex; justify-content: space-between'>
         <h3 id='anchorTop'>Information</h3>
-        <router-link to='/home#anchorBot' active-class="router-hover" exact event="mousemove">to Performance {{data1}}</router-link>
+        <!-- <router-link to='/home#anchorBot' active-class="router-hover" exact event="mousemove">to Performance {{data1}}</router-link> -->
     </div>
     <div style='height: 600px; display: flex; justify-content: space-between'>
         <h3 id='anchorBot'>Performance</h3>
@@ -53,6 +53,7 @@ export default {
                 name: 'home',
                 hash: '#anchorTop'
             })
+            console.log(this.$route);
         }
     },
     beforeRouteLeave(to, from, next) {

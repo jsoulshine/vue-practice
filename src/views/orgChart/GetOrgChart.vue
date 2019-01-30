@@ -11,14 +11,14 @@ export default {
     return {
         dataSource: [
             {
-            id: 1,
-            parentId: null,
-            name: "Amber McKenzie",
+            id: 1,    //必须放在第一位
+            parentId: null, //必须放在第二位
+            name: "Amber McKenzie Amber McKenzie",
             title: "CEO",
             phone: "678-772-470",
             mail: "lemmons@jourrapide.com",
             adress: "Atlanta, GA 30303",
-            image: "static/js-plugins/GetOrgChart/images/f-11.jpg"
+            // image: "static/js-plugins/GetOrgChart/images/f-11.jpg"
             },
             {
             id: 2,
@@ -101,10 +101,10 @@ export default {
             }
         ],
         options: {
-            primaryFields: ["name", "title", "phone", "mail", "CustomHtml"],
-            photoFields: ["image"],
-            // theme: 'myTheme',
-            theme: 'deborah',
+            primaryFields: ["name", "title", "phone", "mail"],
+            // photoFields: ["image"],
+            theme: 'myTheme',
+            // theme: 'deborah',
             color: "blue",
             enableEdit: false,
             enableZoom: false,
@@ -119,7 +119,7 @@ export default {
             linkType: "M",
             orientation: getOrgChart.RO_TOP,
             primaryFields: ["name", "title"],
-            photoFields: ['image'],
+            // photoFields: ['image'],
             idField: "id",
             secondParentIdField: 'secondManager',
             levelSeparation: 200,
@@ -185,24 +185,23 @@ export default {
   mounted() {
       getOrgChart.themes.myTheme =
             {
-                size: [500, 500],
-                toolbarHeight: 46,
-                textPoints: [
-                    { x: 250, y: 150, width: 230 },
-                    { x: 250, y: 350, width: 230 }, 
-                    { x: 250, y: 375, width: 180 }
-                ],
-                textPointsNoImage: [
-                    { x: 250, y: 240, width: 490 },
-                    { x: 250, y: 270, width: 490 },
-                    { x: 250, y: 300, width: 490 }
-                ],
-                expandCollapseBtnRadius: 20,
-                box: '<path class="get-box" d="M0 0 L500 0 L500 500 L0 500 Z"/>',
-                text: '<text text-anchor="middle" width="[width]" class="get-text get-text-[index]" x="[x]" y="[y]">[text]</text>',
-                image: '<clipPath id="getMonicaClip"><circle cx="245" cy="245" r="85" /></clipPath><image preserveAspectRatio="xMidYMid slice" clip-path="url(#getMonicaClip)" xlink:href="[href]" x="160" y="160" height="170" width="170"/>'
+            size: [400, 200],  //整体宽高，可以通过此来改变各个节点的上下左右距离
+            toolbarHeight: 46, //整体距离顶部的nav的距离
+            textPoints: [
+                { x: 150, y: 50, width: 250 },
+                { x: 150, y: 90, width: 250 }
+            ],
+            textPointsNoImage: [
+                { x: 130, y: 150, width: 250 },
+                { x: 130, y: 190, width: 250 }
+            ],
+            expandCollapseBtnRadius: 20,
+            defs: '<filter id="f1" x="0" y="0" width="200%" height="200%"><feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" /><feGaussianBlur result="blurOut" in="offOut" stdDeviation="5" /><feBlend in="SourceGraphic" in2="blurOut" mode="normal" /></filter>',
+            box: '<rect x="0" y="0" height="200" width="400" rx="10" ry="10" class="myCustomTheme-box" filter="url(#f1)"  />',
+            text: '<text text-anchor="middle" width="[width]" class="get-text get-text-[index]" x="[x]" y="[y]">[text]</text>',
+            image: '<clipPath id="getMonicaClip"><circle cx="135" cy="255" r="85" /></clipPath><image preserveAspectRatio="xMidYMid slice" clip-path="url(#getMonicaClip)" xlink:href="[href]" x="50" y="150" height="190" width="170"/>',
+        };
 
-            };
       this.initChart();
     //   document.body.onclick = () => {
     //       this.dataSource.find(item => item.id === 5).secondManager = 1;
@@ -221,7 +220,14 @@ export default {
 };
 </script>
 
-<style scoped>
-    
+<style>
+    .myCustomTheme-box{
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap
+    }
+    .get-text{
+        
+    }
 </style>
 
