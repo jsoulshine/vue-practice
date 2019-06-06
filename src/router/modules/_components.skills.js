@@ -31,6 +31,14 @@ const componentsSkills = [{
       component: resolve => {
         require(['@/views/Echarts/echarts.vue'], resolve);
       }
+    },
+    {
+      path: 'transition',
+      title: 'Transition',
+      name: 'transition',
+      component: resolve => {
+        require(['@/views/vue-transition/transition.vue'], resolve);
+      }
     }
   ]
 }];
