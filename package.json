@@ -16,7 +16,7 @@
     "axios": "^0.18.0",
     "bootstrap": "^3.3.7",
     "cropperjs": "^1.2.2",
-    "echarts": "^4.2.0-rc.2",
+    "echarts": "^5.4.2",
     "es6-promise": "^4.2.4",
     "iview": "^3.2.2",
     "jollychic-getorgchart": "^1.0.4",
